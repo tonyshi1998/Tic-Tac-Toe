@@ -1,9 +1,11 @@
 .board{
+    margin: auto;
     display: grid;   
     width: 50%;
     grid-template-columns: repeat(3, 1fr);
     border-radius: 5rem;
     gap: 1rem;   
+    align-items: center;
 }
 
 .board div{
@@ -12,4 +14,9 @@
     display: flex;
     align-items: center;
     justify-content: center;
+    color: #282c34;
+}
+
+.winnerMsg{
+    margin: 2rem;
 }
