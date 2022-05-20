@@ -6,14 +6,12 @@ import Header from './Components/Header';
 
 function App() {
   const [turn, setTurn] = useState('O')
-  const resetHandler = props =>{
-
-  }
 
   return (
     <div className="App">
+      
       <header className="App-content">
-        {<Header turn={turn} onReset={resetHandler}> </Header>}
+        <Header turn={turn}> </Header>
         <Grid onChangeTurn={setTurn}></Grid>
       </header>
     </div>
