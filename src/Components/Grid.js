@@ -1,5 +1,6 @@
 import classes from "./Grid.module.css";
 import { Fragment, useEffect, useState } from "react";
+import Modal from "./Modal";
 
 
 const Grid = (props) => {
@@ -38,6 +39,21 @@ const Grid = (props) => {
     }
   }, [grid]);
 
+  const resetHandler = (turnHandler) =>{
+    setGrid([
+      " ",
+      " ",
+      " ",
+      " ",
+      " ",
+      " ",
+      " ",
+      " ",
+      " ",
+    ])
+    setWinner()  
+  }
+
   const advanceTurn = (turnHandler) => {
     if (turn === "O") {
       setTurn("X");
@@ -73,7 +89,7 @@ const Grid = (props) => {
         <div onClick={(event) => clickHandler(event, 7, props.onChangeTurn)}> {grid[7]} </div>
         <div onClick={(event) => clickHandler(event, 8, props.onChangeTurn)}> {grid[8]} </div>
       </div>
-      {winner && <h1 className={classes.winnerMsg}>{winner} has won!</h1>}
+      {winner && <Modal winner={winner} onReset={(event) => resetHandler(event, props.onChangeTurn)}></Modal>}
     </Fragment>
   );
 };
