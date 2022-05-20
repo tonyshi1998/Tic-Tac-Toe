@@ -1,0 +1,26 @@
+.header {
+  padding: 1rem;
+  width: 100%;
+  background: aqua;
+  color: #282c34;
+  font-size: 2rem;
+  margin-bottom: 2rem;
+  top: 0
+
+}
+
+.header h1{
+  margin: 2rem 0 2rem 0;
+  vertical-align: middle;
+}
+
+.reset{
+  padding: 0.75rem 3rem;
+  display: inline-block;
+  margin: 0 2rem;
+  vertical-align: middle;
+  border-radius: 10rem;
+  background-color: #282c34;
+  color: white;
+  font-size: 1rem;
+}
